@@ -18,7 +18,7 @@ class EbaySpider(scrapy.Spider):
 
     def start_requests(self):
         for url in self.start_urls:
-            yield SplashRequest(url, self.parse, args={'wait': 1})
+            yield SplashRequest(url, self.parse, args={'wait': 1})   
 
     def parse(self, response):
         # Extract product details using updated XPath
